@@ -2,7 +2,7 @@ import time
 from random import randrange
 import sys
 
-version = '0.2'
+version = '1.0.2'
 print("\nNumber Guessing Game\n"
 	  f"Version {version}\n")
 print("Fitzie Enterprises, LLC.\n"
@@ -81,13 +81,12 @@ def win():
 	
 	
 def compare(num, ans):
+	"""Validates that a proper number was entered. Then compares the player's guess against the correct number."""
 	try:
 		num = int(num)
 	except ValueError:
 		print("Invalid entry!  Please try again")
 		sys.exit()
-#	else:
-#		print(f"Checks out: {num}")
 	
 	while True:
 		if num == '':
@@ -111,6 +110,7 @@ def compare(num, ans):
 	
 
 def validate(num):
+	"""Currently no in use"""
 	while True:
 		if num == '':
 			print("Invalid entry (null)")
